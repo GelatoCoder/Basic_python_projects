@@ -1,0 +1,52 @@
+def for_pal():
+    string = input("Enter string : ")
+    s1 = ""
+    for i in string:
+        s1 = i + s1
+    if s1 == string:
+        print(f"{string} is palindrome")
+    else:
+        print(f"{string} is not palindrome")
+
+def while_pal():
+    string = input("Enter string : ")
+    length = len(string) - 1
+    s1 = ""
+    while length>=0:
+        s1 = s1 + string[length]
+        length -= 1
+    if s1 == string:
+        print(f"{string} is palindrome")
+    else:
+        print(f"{string} is not palindrome")
+
+def slic_pal():
+    string = input("Enter string : ")
+    print(string[::-1])
+    if string[::-1] == string:
+        print(f"{string} is palindrome")
+    else:
+        print(f"{string} is not palindrome")
+
+
+choice = ""
+while choice!="q":
+    print("""********Palindrome Program*********
+
+Type 1. check palindrome using for loop
+Type 2. check palindrome using while loop
+Type 3. check palindrome using string slicing
+Type q to quit
+
+***********************************""")
+    choice = input("Enter your choice > ")
+    if choice == "1":
+        for_pal()
+    elif choice == "2":
+        while_pal()
+    elif choice == "3":
+        slic_pal()
+
+
+
+
